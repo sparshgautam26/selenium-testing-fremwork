@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Automation Practice Suite">
+
+   
+        <listeners>
+    <listener class-name="PracticeAutomation.practice.MyListener"/>
+</listeners>
+
+
+    <test name="Smoke Tests">
+
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+
+        
+            <classes>
+    <class name="PracticeAutomation.practice.HomePageTest"/>
+    <class name="PracticeAutomation.practice.FormTest"/>
+    <class name="PracticeAutomation.practice.AfterSuiteCleanup"/>
+</classes>
+
+        
+
+    </test>
+
+</suite>
