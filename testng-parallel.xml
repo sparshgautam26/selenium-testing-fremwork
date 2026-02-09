@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="ParallelSuite"
+       parallel="classes"
+       thread-count="5">
+
+    <!-- Listener attach yahin hota hai -->
+    <listeners>
+        <listener class-name="PracticeAutomation.practice.MyListener"/>
+    </listeners>
+
+    <test name="Parallel UI Tests">
+        <classes>
+            <class name="PracticeAutomation.practice.HomePageTest"/>
+            <class name="PracticeAutomation.practice.FormTest"/>
+        </classes>
+    </test>
+
+</suite>

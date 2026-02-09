@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class HomePageTest extends BaseTest{
 
-	@Test(groups= {"smoke"})
+	@Test(invocationCount = 3, threadPoolSize = 3 )
 		public void titleVerify() {
 			String title = driver.getTitle();
 			Assert.assertTrue(title.contains("Automation"),"Titile mismatch");
